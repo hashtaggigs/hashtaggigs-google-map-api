@@ -1,0 +1,11 @@
+<template name="MainLayout">
+    <header>
+        {{> MainHeaderComponent}}
+    </header>
+    <article>
+        {{> Template.dynamic template=content}}
+    </article>
+    <footer>
+        {{> MainFooterComponent}}
+    </footer>
+</template>
