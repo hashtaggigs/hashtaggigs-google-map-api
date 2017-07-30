@@ -1,11 +1,11 @@
 /**
  * Created by Hashtag Gigs on 4/8/2017.
  */
-import { Statics } from '../../statics/statics';
+import { Modules } from '../../modules/modules';
 
 GoogleMapsLoader = require('google-maps');
 MarkerClusterer = require('node-js-marker-clusterer');
 
-GoogleMapsLoader.KEY = Statics.Text.GoogleMaps.Key;
-GoogleMapsLoader.LIBRARIES = Statics.Text.GoogleMaps.Libraries;
-GoogleMapsLoader.VERSION = Statics.Text.GoogleMaps.Version;
+GoogleMapsLoader.KEY = Modules.Text.GoogleMaps.Key;
+GoogleMapsLoader.LIBRARIES = Modules.Text.GoogleMaps.Libraries;
+GoogleMapsLoader.VERSION = Modules.Text.GoogleMaps.Version;

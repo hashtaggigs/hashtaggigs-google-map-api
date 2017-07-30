@@ -17,7 +17,7 @@ import { GoogleMapsFunctions } from './functions/google-maps';
 import { CommonFunctions } from './functions/common';
 
 // main object
-export const Statics = {
+export const Modules = {
     Text: {
         ElementId: ElementId,
         RouteName: RouteName,

@@ -4,18 +4,18 @@
 import { Template } from 'meteor/templating';
 
 import { Cities } from '../../api/cities/cities';
-import { Statics } from '../../../imports/statics/statics';
+import { Modules } from '../../modules/modules';
 
 import './clustered-map-component.html';
 import './clustered-map-component.css';
 
-Template[Statics.Text.TemplateName.ClusteredMapComponent].onCreated(function () {
+Template[Modules.Text.TemplateName.ClusteredMapComponent].onCreated(function () {
     this.autorun(() => {
-        this.citiesSubscription = this.subscribe(Statics.Text.PublicationName.AllCities);
+        this.citiesSubscription = this.subscribe(Modules.Text.PublicationName.AllCities);
 
         if (this.citiesSubscription.ready()) {
-            Statics.Functions.GoogleMaps.CreateMap({
-                id: Statics.Text.ElementId.ClusteredMapId,
+            Modules.Functions.GoogleMaps.CreateMap({
+                id: Modules.Text.ElementId.ClusteredMapId,
                 points: Cities.find({}).fetch(),
                 isClustered: true
             });

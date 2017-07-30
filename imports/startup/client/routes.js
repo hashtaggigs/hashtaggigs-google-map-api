@@ -3,20 +3,20 @@
  */
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
-import { Statics } from '../../statics/statics';
+import { Modules } from '../../modules/modules';
 
 import '../../ui/layouts/main-layout';
 
-FlowRouter.route(`/${Statics.Text.PathName.MapsPage}`, {
-    name: Statics.Text.RouteName.MapsPage,
+FlowRouter.route(`/${Modules.Text.PathName.MapsPage}`, {
+    name: Modules.Text.RouteName.MapsPage,
     action: () => {
-        BlazeLayout.render(Statics.Text.TemplateName.MainLayout, { content: Statics.Text.TemplateName.MapsPage });
+        BlazeLayout.render(Modules.Text.TemplateName.MainLayout, { content: Modules.Text.TemplateName.MapsPage });
     }
 });
 
 FlowRouter.route('/', {
-    name: Statics.Text.RouteName.Default,
+    name: Modules.Text.RouteName.Default,
     action: () => {
-        FlowRouter.go(Statics.Text.RouteName.MapsPage);
+        FlowRouter.go(Modules.Text.RouteName.MapsPage);
     }
 });
